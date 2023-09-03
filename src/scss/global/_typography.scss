@@ -9,7 +9,11 @@ h4 {
 }
 
 h1 {
-  font-size: 9.375rem;
+  font-size: 5rem;
+  font-family: 400;
+  @media (min-width: 375px) {
+    font-size: 9.375rem;
+  }
 }
 h2 {
   font-size: 6.25rem;
@@ -23,16 +27,35 @@ h4 {
 h5 {
   color: var(--primary-2);
   font-family: font.$heading5;
-  font-size: 1.75rem;
-  letter-spacing: 0.297rem;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 2.7px;
   margin: 0;
+  @media (min-width: 375px) {
+    font-size: 1.25rem;
+    letter-spacing: 3.375px;
+  }
+  @media (min-width: 768px) {
+    font-size: 1.75rem;
+    letter-spacing: 4.725px;
+  }
 }
 
 p {
-  color: var(--primary-3);
-  margin: 0;
+  color: var(--primary-2);
   font-family: font.$text;
-  font-size: 1.125rem;
+  font-size: 0.938rem;
+  font-weight: 400;
+  line-height: 25px;
+  margin: 0;
+  @media (min-width: 375px) {
+    font-size: 1rem;
+    line-height: 28px;
+  }
+  @media (min-width: 768px) {
+    font-size: 1.125rem;
+    line-height: 32px;
+  }
 }
 a {
   color: var(--primary-3);

@@ -1,0 +1,11 @@
+.destination {
+  background-image: url("../../../public/assets/destination/background-destination-mobile.jpg");
+  height: 100vh;
+  padding-top: 5rem;
+  @media (min-width: 375px) {
+    background-image: url("../../../public/assets/destination/background-destination-tablet.jpg");
+  }
+  @media (min-width: 768px) {
+    background-image: url("../../../public/assets/destination/background-destination-desktop.jpg");
+  }
+}

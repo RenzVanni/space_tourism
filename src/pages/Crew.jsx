@@ -2,7 +2,7 @@ import React from "react";
 
 function Crew() {
   return (
-    <div>
+    <div className="crew">
       <h1>Crew</h1>
     </div>
   );

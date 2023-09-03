@@ -20,10 +20,12 @@
       top: 50%;
       transform: translateY(-50%);
       left: -95%;
+      min-width: 1px;
       width: 100%;
       padding: 0.03rem;
       opacity: 0.2515;
       background-color: var(--primary-3);
+      z-index: 0;
     }
   }
 
