@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Bellefair&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap");
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-1: #0b0d17;
+  --primary-2: #d0d6f9;
+  --primary-3: #ffffff;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Bellefair", serif;
+  color: var(--primary-3);
+  margin: 0;
+}
+
+h1 {
+  font-size: 9.375rem;
+}
+
+h2 {
+  font-size: 6.25rem;
+}
+
+h3 {
+  font-size: 3.5rem;
+}
+
+h4 {
+  font-size: 2rem;
+}
+
+h5 {
+  color: var(--primary-2);
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 1.75rem;
+  letter-spacing: 0.297rem;
+  margin: 0;
+}
+
+p {
+  color: var(--primary-3);
+  margin: 0;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 1.125rem;
+}
+
+a {
+  color: var(--primary-3);
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 0.875rem;
+  letter-spacing: 0.148rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.home {
+  background-image: url("../../../public/assets/home/background-home-desktop.jpg");
+  background-size: cover;
+  height: 100vh;
+  padding-top: 5rem;
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+}
+@media (min-width: 375px) {
+  .navbar {
+    padding: 0;
+    width: 97%;
+  }
+}
+@media (min-width: 768px) {
+  .navbar {
+    top: 3%;
+  }
+  .navbar .nav::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -95%;
+    width: 100%;
+    padding: 0.03rem;
+    opacity: 0.2515;
+    background-color: var(--primary-3);
+  }
+}
+.navbar .logo-container {
+  width: 48px;
+}
+.navbar .logo-container img {
+  width: inherit;
+}
+.navbar .nav {
+  display: none;
+}
+@media (min-width: 375px) {
+  .navbar .nav {
+    display: flex;
+    background: rgba(255, 255, 255, 0.04);
+    -webkit-backdrop-filter: blur(40.7742271423px);
+            backdrop-filter: blur(40.7742271423px);
+    padding: 2rem;
+    gap: 1rem;
+  }
+}
+@media (min-width: 768px) {
+  .navbar .nav {
+    padding: 2rem 10rem 2rem 8rem;
+    gap: 2rem;
+  }
+}
+@media (min-width: 375px) {
+  .navbar .hamburger-container {
+    display: none;
+  }
+}/*# sourceMappingURL=styles.css.map */

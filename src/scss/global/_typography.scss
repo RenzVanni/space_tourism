@@ -1,0 +1,44 @@
+@use "./fonts" as font;
+h1,
+h2,
+h3,
+h4 {
+  font-family: font.$heading;
+  color: var(--primary-3);
+  margin: 0;
+}
+
+h1 {
+  font-size: 9.375rem;
+}
+h2 {
+  font-size: 6.25rem;
+}
+h3 {
+  font-size: 3.5rem;
+}
+h4 {
+  font-size: 2rem;
+}
+h5 {
+  color: var(--primary-2);
+  font-family: font.$heading5;
+  font-size: 1.75rem;
+  letter-spacing: 0.297rem;
+  margin: 0;
+}
+
+p {
+  color: var(--primary-3);
+  margin: 0;
+  font-family: font.$text;
+  font-size: 1.125rem;
+}
+a {
+  color: var(--primary-3);
+  font-family: font.$text;
+  font-size: 0.875rem;
+  letter-spacing: 0.148rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
