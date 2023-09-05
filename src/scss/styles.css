@@ -290,6 +290,10 @@ li {
 }
 .destination ul li {
   list-style: none;
+  text-transform: uppercase;
+}
+.destination h3 {
+  text-transform: uppercase;
 }
 .destination .context {
   margin: 0 2rem;
@@ -308,6 +312,7 @@ li {
 .destination .more .distance,
 .destination .more .time {
   font-size: 1.75rem;
+  text-transform: uppercase;
 }
 .destination .more .section2 {
   margin-top: 1rem;

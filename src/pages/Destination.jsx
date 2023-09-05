@@ -1,6 +1,14 @@
-import React from "react";
+import { useState, useEffect } from "react";
+import data from "../data.json";
 
 function Destination() {
+  const [destination, setDestination] = useState(data.destinations[0]);
+  const [dataName, setDataName] = useState(data.destinations);
+
+  useEffect(() => {
+    console.log(destination);
+  }, [destination]);
+
   return (
     <div className="destination">
       <div className="left-container">
@@ -9,37 +17,38 @@ function Destination() {
         </p>
 
         <div className="image-container">
-          <img src="../../public/assets/destination/image-moon.png" alt="" />
+          <img src={destination.images.png} alt={destination.name} />
         </div>
       </div>
 
       <div className="right-container">
         <ul>
-          <li>MOON</li>
-          <li>MARS</li>
-          <li>EUROPA</li>
-          <li>TITAN</li>
+          {dataName.map((dats, index) => {
+            return (
+              <li
+                key={dats.name}
+                onClick={() => setDestination(dataName[index])}
+              >
+                {dats.name}
+              </li>
+            );
+          })}
         </ul>
 
-        <h3>MOON</h3>
+        <h3>{destination.name}</h3>
 
-        <p className="context">
-          See our planet as you’ve never seen it before. A perfect relaxing trip
-          away to help regain perspective and come back refreshed. While you’re
-          there, take in some history by visiting the Luna 2 and Apollo 11
-          landing sites.
-        </p>
+        <p className="context">{destination.description}</p>
 
         <hr />
 
         <div className="more">
           <div className="section1">
             <p className="text">AVG. DISTANCE</p>
-            <h4 className="distance">384,400 KM</h4>
+            <h4 className="distance">{destination.distance}</h4>
           </div>
           <div className="section2">
             <p className="text">EST. TRAVEL TIME</p>
-            <h4 className="time">3 DAYS</h4>
+            <h4 className="time">{destination.travel}</h4>
           </div>
         </div>
       </div>
