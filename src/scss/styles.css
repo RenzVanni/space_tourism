@@ -209,8 +209,13 @@ li {
 }
 .home .explore-button {
   margin-top: 5rem;
+  display: flex;
+  justify-content: center;
 }
-.home .explore-button button {
+.home .explore-button .btn-circle {
+  padding: 1rem;
+}
+.home .explore-button .btn-circle button {
   width: 9.375rem;
   height: 9.375rem;
   background-color: var(--primary-3);
@@ -222,23 +227,38 @@ li {
   font-weight: 400;
   letter-spacing: 1.25px;
 }
+.home .explore-button .btn-circle:hover {
+  border-radius: 100%;
+  background-color: rgba(255, 255, 255, 0.1036);
+}
 @media (min-width: 375px) {
   .home {
     background-image: url("../../../public/assets/home/background-home-tablet.jpg");
+    height: auto;
   }
   .home .text-container {
     padding: 0 20%;
   }
-  .home .explore-button button {
+  .home .explore-button .btn-circle {
+    padding: 2rem;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .home .explore-button .btn-circle button {
     width: 242px;
     height: 242px;
     font-size: 2rem;
     letter-spacing: 2px;
   }
+  .home .explore-button .btn-circle:hover {
+    border-radius: 100%;
+    background-color: rgba(255, 255, 255, 0.1036);
+  }
 }
 @media (min-width: 768px) {
   .home {
     background-image: url("../../../public/assets/home/background-home-desktop.jpg");
+    height: 100vh;
     display: flex;
     align-items: flex-end;
     padding: 7rem 9rem;
@@ -256,9 +276,16 @@ li {
     display: flex;
     justify-content: end;
   }
-  .home .explore-button button {
+  .home .explore-button .btn-circle {
+    padding: 4rem;
+  }
+  .home .explore-button .btn-circle button {
     width: 274px;
     height: 274px;
+  }
+  .home .explore-button .btn-circle:hover {
+    border-radius: 100%;
+    background-color: rgba(255, 255, 255, 0.1036);
   }
 }
 
@@ -294,7 +321,7 @@ li {
   list-style: none;
   text-transform: uppercase;
   padding: 0.7rem 0;
-  transition: 0.2s ease-in-out;
+  transition: 0.1s ease-in-out;
 }
 .destination ul li:hover {
   border-bottom: 3px solid var(--primary-3);
@@ -435,15 +462,17 @@ li {
   font-size: 1rem;
   opacity: 0.4951;
   margin: 0 auto 0.5rem auto;
+  text-transform: uppercase;
   width: clamp(300px, 60%, 100%);
 }
 .crew h3 {
   font-size: 1.5rem;
   margin: 0 auto 1rem auto;
+  text-transform: uppercase;
   width: clamp(300px, 60%, 100%);
 }
 .crew p {
-  margin: 0 1.5rem;
+  margin: 0 auto;
   width: clamp(300px, 60%, 100%);
 }
 @media (min-width: 375px) {
@@ -453,41 +482,75 @@ li {
   }
   .crew .pick {
     text-align: start;
+    margin: 0 0 0 1.5rem;
   }
   .crew .information-container {
     display: flex;
     flex-direction: column-reverse;
   }
-  .crew .information-container .container-1 {
-    display: flex;
-    flex-direction: column-reverse;
-  }
-  .crew .information-container .container-1 .image-container {
+  .crew .information-container .image-container {
+    border-bottom: none;
     margin: 0;
     width: 100%;
   }
-  .crew .information-container .container-1 .image-container img {
+  .crew .information-container .image-container img {
     width: 456px;
   }
-  .crew .information-container .container-1 ul {
-    margin: 2rem 0 3rem 0;
-  }
-  .crew .information-container .container-2 {
+  .crew .information-container .context-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
     margin-top: 3rem;
   }
-  .crew .information-container .container-2 h4 {
+  .crew .information-container .context-container ul {
+    margin: 2rem 0 3rem 0;
+  }
+  .crew .information-container .context-container .sub-container h4 {
     font-size: 1.5rem;
   }
-  .crew .information-container .container-2 h3 {
+  .crew .information-container .context-container .sub-container h3 {
     font-size: 2.5rem;
   }
 }
 @media (min-width: 768px) {
   .crew {
     background-image: url("../../../public/assets/crew/background-crew-desktop.jpg");
+    height: 100vh;
+    display: flex;
+    align-items: end;
+  }
+  .crew .pick {
+    position: absolute;
+    left: 9%;
+    top: 170px;
+    margin: 0;
+  }
+  .crew .information-container {
+    flex-direction: row-reverse;
+  }
+  .crew .information-container .context-container {
+    margin-top: 0;
+    width: 100%;
+    align-items: start;
+    gap: 4rem;
+    padding-left: 8rem;
+  }
+  .crew .information-container .context-container .sub-container {
+    text-align: start;
+  }
+  .crew .information-container .context-container .sub-container h4 {
+    font-size: 2rem;
+    margin: 0 0 0.5rem 0;
+    width: 100%;
+  }
+  .crew .information-container .context-container .sub-container h3 {
+    font-size: 3.5rem;
+    margin: 0 0 1rem 0;
+    width: 100%;
+  }
+  .crew .information-container .context-container .sub-container p {
+    margin: 0;
+    width: 70%;
   }
 }
 

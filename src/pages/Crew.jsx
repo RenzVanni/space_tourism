@@ -1,36 +1,49 @@
-import React from "react";
+import { useState, useEffect } from "react";
+function Crew({ data }) {
+  const [crew, setCrew] = useState(data);
+  const [person, setPerson] = useState(data[0]);
+  const [active, setActive] = useState(0);
 
-function Crew() {
+  useEffect(() => {
+    console.log(person);
+  }, [person]);
+
   return (
     <div className="crew">
       <p className="pick">
-        <span>01</span> PICK YOUR DESTINATION
+        <span>02</span> PICK YOUR DESTINATION
       </p>
 
       <div className="information-container">
-        <div className="container-1">
-          <div className="image-container">
-            <img
-              src="../../public/assets/crew/image-douglas-hurley.png"
-              alt=""
-            />
-          </div>
-
-          <ul>
-            <li>
-              <div></div>
-            </li>
-          </ul>
+        <div className="image-container">
+          <img src={person.images.png} alt={person.name} />
         </div>
 
-        <div className="container-2">
-          <h4>COMMANDER</h4>
-          <h3>DOUGLAS HURLEY</h3>
-          <p>
-            Douglas Gerald Hurley is an American engineer, former Marine Corps
-            pilot and former NASA astronaut. He launched into space for the
-            third time as commander of Crew Dragon Demo-2.
-          </p>
+        <div className="context-container">
+          <ul>
+            {crew.map((crewCount, index) => {
+              return (
+                <li
+                  key={crewCount.name}
+                  onClick={() => {
+                    setPerson(crew[index]);
+                    setActive(index);
+                  }}
+                >
+                  <div
+                    style={{
+                      backgroundColor: active === index ? "#fff" : "#383b4b",
+                    }}
+                  ></div>
+                </li>
+              );
+            })}
+          </ul>
+          <div className="sub-container">
+            <h4>{person.role}</h4>
+            <h3>{person.name}</h3>
+            <p>{person.bio}</p>
+          </div>
         </div>
       </div>
     </div>

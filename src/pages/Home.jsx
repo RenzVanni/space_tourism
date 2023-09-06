@@ -15,7 +15,9 @@ function Home() {
       </div>
 
       <div className="explore-button">
-        <button>EXPLORE</button>
+        <div className="btn-circle">
+          <button>EXPLORE</button>
+        </div>
       </div>
     </div>
   );

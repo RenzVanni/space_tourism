@@ -20,37 +20,57 @@
 
   .explore-button {
     margin-top: 5rem;
-    button {
-      width: 9.375rem;
-      height: 9.375rem;
-      background-color: var(--primary-3);
-      border: none;
+    display: flex;
+    justify-content: center;
+    .btn-circle {
+      padding: 1rem;
+      button {
+        width: 9.375rem;
+        height: 9.375rem;
+        background-color: var(--primary-3);
+        border: none;
+        border-radius: 100%;
+        color: var(--primary-1);
+        font-family: font.$heading;
+        font-size: 1.25rem;
+        font-weight: 400;
+        letter-spacing: 1.25px;
+      }
+    }
+    .btn-circle:hover {
       border-radius: 100%;
-      color: var(--primary-1);
-      font-family: font.$heading;
-      font-size: 1.25rem;
-      font-weight: 400;
-      letter-spacing: 1.25px;
+      background-color: rgba($color: #ffff, $alpha: 0.1036);
     }
   }
   @media (min-width: 375px) {
     background-image: url("../../../public/assets/home/background-home-tablet.jpg");
+    height: auto;
 
     .text-container {
       padding: 0 20%;
     }
 
     .explore-button {
-      button {
-        width: 242px;
-        height: 242px;
-        font-size: 2rem;
-        letter-spacing: 2px;
+      .btn-circle {
+        padding: 2rem;
+        width: fit-content;
+        button {
+          width: 242px;
+          height: 242px;
+          font-size: 2rem;
+          letter-spacing: 2px;
+        }
+      }
+
+      .btn-circle:hover {
+        border-radius: 100%;
+        background-color: rgba($color: #ffff, $alpha: 0.1036);
       }
     }
   }
   @media (min-width: 768px) {
     background-image: url("../../../public/assets/home/background-home-desktop.jpg");
+    height: 100vh;
     display: flex;
     align-items: flex-end;
     padding: 7rem 9rem;
@@ -66,9 +86,19 @@
       width: 100%;
       display: flex;
       justify-content: end;
-      button {
-        width: 274px;
-        height: 274px;
+
+      .btn-circle {
+        padding: 4rem;
+
+        button {
+          width: 274px;
+          height: 274px;
+        }
+      }
+
+      .btn-circle:hover {
+        border-radius: 100%;
+        background-color: rgba($color: #ffff, $alpha: 0.1036);
       }
     }
   }

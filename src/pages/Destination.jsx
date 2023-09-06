@@ -4,6 +4,7 @@ import data from "../data.json";
 function Destination() {
   const [destination, setDestination] = useState(data.destinations[0]);
   const [dataName, setDataName] = useState(data.destinations);
+  const [active, setActive] = useState(0);
 
   useEffect(() => {
     console.log(destination);
@@ -27,7 +28,15 @@ function Destination() {
             return (
               <li
                 key={dats.name}
-                onClick={() => setDestination(dataName[index])}
+                onClick={() => {
+                  setDestination(dataName[index]);
+                  setActive(index);
+                }}
+                style={{
+                  borderBottom:
+                    active === index ? "3px solid var(--primary-3)" : null,
+                  color: active === index ? "var(--primary-3)" : null,
+                }}
               >
                 {dats.name}
               </li>

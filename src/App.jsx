@@ -6,6 +6,8 @@ import Destination from "./pages/Destination";
 import Crew from "./pages/Crew";
 import Technology from "./pages/Technology";
 
+import data from "./data.json";
+
 function App() {
   return (
     <BrowserRouter>
@@ -13,7 +15,7 @@ function App() {
         <Route path="/" element={<SharedLayout />}>
           <Route index element={<Home />} />
           <Route path="destination" element={<Destination />} />
-          <Route path="crew" element={<Crew />} />
+          <Route path="crew" element={<Crew data={data.crew} />} />
           <Route path="technology" element={<Technology />} />
         </Route>
       </Routes>
