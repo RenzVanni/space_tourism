@@ -14,6 +14,8 @@ html {
 body {
   margin: 0;
   padding: 0;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 :root {
@@ -291,6 +293,12 @@ li {
 .destination ul li {
   list-style: none;
   text-transform: uppercase;
+  padding: 0.7rem 0;
+  transition: 0.2s ease-in-out;
+}
+.destination ul li:hover {
+  border-bottom: 3px solid var(--primary-3);
+  color: var(--primary-3);
 }
 .destination h3 {
   text-transform: uppercase;
@@ -388,10 +396,93 @@ li {
   background-size: cover;
   padding-top: 5rem;
   height: 100vh;
+  text-align: center;
+}
+.crew .pick {
+  color: var(--primary-3);
+  letter-spacing: 2.7px;
+}
+.crew .pick span {
+  font-weight: 700;
+  opacity: 0.25;
+}
+.crew .image-container {
+  border-bottom: 2px solid #383b4b;
+  width: 90%;
+  margin: 2rem auto 0 auto;
+  display: flex;
+  justify-content: center;
+}
+.crew .image-container img {
+  width: 200px;
+}
+.crew ul {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.crew ul li {
+  list-style: none;
+}
+.crew ul li div {
+  padding: 0.3rem;
+  border-radius: 100%;
+  border: none;
+  background-color: var(--primary-3);
+}
+.crew h4 {
+  font-size: 1rem;
+  opacity: 0.4951;
+  margin: 0 auto 0.5rem auto;
+  width: clamp(300px, 60%, 100%);
+}
+.crew h3 {
+  font-size: 1.5rem;
+  margin: 0 auto 1rem auto;
+  width: clamp(300px, 60%, 100%);
+}
+.crew p {
+  margin: 0 1.5rem;
+  width: clamp(300px, 60%, 100%);
 }
 @media (min-width: 375px) {
   .crew {
     background-image: url("../../../public/assets/crew/background-crew-tablet.jpg");
+    height: auto;
+  }
+  .crew .pick {
+    text-align: start;
+  }
+  .crew .information-container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .crew .information-container .container-1 {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .crew .information-container .container-1 .image-container {
+    margin: 0;
+    width: 100%;
+  }
+  .crew .information-container .container-1 .image-container img {
+    width: 456px;
+  }
+  .crew .information-container .container-1 ul {
+    margin: 2rem 0 3rem 0;
+  }
+  .crew .information-container .container-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+  }
+  .crew .information-container .container-2 h4 {
+    font-size: 1.5rem;
+  }
+  .crew .information-container .container-2 h3 {
+    font-size: 2.5rem;
   }
 }
 @media (min-width: 768px) {

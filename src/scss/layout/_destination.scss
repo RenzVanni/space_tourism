@@ -27,10 +27,16 @@
     align-items: center;
     justify-content: center;
     gap: 1rem;
-
     li {
       list-style: none;
       text-transform: uppercase;
+      padding: 0.7rem 0;
+      transition: 0.2s ease-in-out;
+    }
+
+    li:hover {
+      border-bottom: 3px solid var(--primary-3);
+      color: var(--primary-3);
     }
   }
 
