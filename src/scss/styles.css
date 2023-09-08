@@ -298,6 +298,8 @@ li {
 .destination .pick {
   color: var(--primary-3);
   letter-spacing: 2.7px;
+  min-width: 259px;
+  margin: 0 2rem;
 }
 .destination .pick span {
   font-weight: 700;
@@ -306,9 +308,22 @@ li {
 .destination .image-container {
   width: 100%;
   margin-top: 2rem;
+  padding: 0 2rem;
 }
 .destination .image-container img {
   width: 259px;
+  animation: floating 4s ease-in-out infinite;
+}
+@keyframes floating {
+  0% {
+    transform: translateY(-5%);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-5%);
+  }
 }
 .destination ul {
   padding: 0;
@@ -316,6 +331,8 @@ li {
   align-items: center;
   justify-content: center;
   gap: 1rem;
+  min-width: 259px;
+  margin: 1rem 2rem;
 }
 .destination ul li {
   list-style: none;
@@ -329,17 +346,23 @@ li {
 }
 .destination h3 {
   text-transform: uppercase;
+  min-width: 259px;
+  margin: 0 2rem;
 }
 .destination .context {
   margin: 0 2rem;
+  min-width: 259px;
 }
 .destination hr {
-  margin: 1.5rem auto;
+  margin: 1.5rem 2rem;
   width: 85%;
+  min-width: 259px;
   border: 0.01rem solid #383b4b;
 }
 .destination .more {
   padding-bottom: 3rem;
+  min-width: 259px;
+  margin: 0 2rem;
 }
 .destination .more .text {
   letter-spacing: 2.362px;
@@ -364,11 +387,14 @@ li {
     margin: 3rem 0;
   }
   .destination .image-container img {
-    width: 457px;
+    width: clamp(259px, 100%, 457px);
   }
   .destination ul {
     margin: 2rem auto;
     gap: 2rem;
+  }
+  .destination h3 {
+    margin: 0;
   }
   .destination .context {
     margin: 0 5rem;
@@ -436,6 +462,7 @@ li {
 .crew .image-container {
   border-bottom: 2px solid #383b4b;
   width: 90%;
+  min-width: 259px;
   margin: 2rem auto 0 auto;
   display: flex;
   justify-content: center;
@@ -448,6 +475,9 @@ li {
   display: flex;
   justify-content: center;
   gap: 1rem;
+  margin-left: 0.5rem;
+  min-width: 259px;
+  margin-right: 0.5rem;
 }
 .crew ul li {
   list-style: none;
@@ -463,17 +493,17 @@ li {
   opacity: 0.4951;
   margin: 0 auto 0.5rem auto;
   text-transform: uppercase;
-  width: clamp(300px, 60%, 100%);
+  width: clamp(259px, 60%, 100%);
 }
 .crew h3 {
   font-size: 1.5rem;
   margin: 0 auto 1rem auto;
   text-transform: uppercase;
-  width: clamp(300px, 60%, 100%);
+  width: clamp(259px, 60%, 100%);
 }
 .crew p {
   margin: 0 auto;
-  width: clamp(300px, 60%, 100%);
+  width: clamp(259px, 60%, 100%);
 }
 @media (min-width: 375px) {
   .crew {

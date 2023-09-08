@@ -19,6 +19,7 @@
   .image-container {
     border-bottom: 2px solid #383b4b;
     width: 90%;
+    min-width: 259px;
     margin: 2rem auto 0 auto;
     display: flex;
     justify-content: center;
@@ -32,6 +33,9 @@
     display: flex;
     justify-content: center;
     gap: 1rem;
+    margin-left: 0.5rem;
+    min-width: 259px;
+    margin-right: 0.5rem;
 
     li {
       list-style: none;
@@ -50,19 +54,19 @@
     opacity: 0.4951;
     margin: 0 auto 0.5rem auto;
     text-transform: uppercase;
-    width: clamp(300px, 60%, 100%);
+    width: clamp(259px, 60%, 100%);
   }
 
   h3 {
     font-size: 1.5rem;
     margin: 0 auto 1rem auto;
     text-transform: uppercase;
-    width: clamp(300px, 60%, 100%);
+    width: clamp(259px, 60%, 100%);
   }
 
   p {
     margin: 0 auto;
-    width: clamp(300px, 60%, 100%);
+    width: clamp(259px, 60%, 100%);
   }
   @media (min-width: 375px) {
     background-image: url("../../../public/assets/crew/background-crew-tablet.jpg");

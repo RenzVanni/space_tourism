@@ -7,6 +7,8 @@
   .pick {
     color: var(--primary-3);
     letter-spacing: 2.7px;
+    min-width: 259px;
+    margin: 0 2rem;
     span {
       font-weight: 700;
       opacity: 0.25;
@@ -16,8 +18,22 @@
   .image-container {
     width: 100%;
     margin-top: 2rem;
+    padding: 0 2rem;
     img {
       width: 259px;
+      animation: floating 4s ease-in-out infinite;
+    }
+  }
+
+  @keyframes floating {
+    0% {
+      transform: translateY(-5%);
+    }
+    50% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-5%);
     }
   }
 
@@ -27,6 +43,8 @@
     align-items: center;
     justify-content: center;
     gap: 1rem;
+    min-width: 259px;
+    margin: 1rem 2rem;
     li {
       list-style: none;
       text-transform: uppercase;
@@ -42,20 +60,27 @@
 
   h3 {
     text-transform: uppercase;
+    min-width: 259px;
+    margin: 0 2rem;
   }
 
   .context {
     margin: 0 2rem;
+    min-width: 259px;
   }
 
   hr {
-    margin: 1.5rem auto;
+    margin: 1.5rem 2rem;
     width: 85%;
+    min-width: 259px;
+
     border: 0.01rem solid #383b4b;
   }
 
   .more {
     padding-bottom: 3rem;
+    min-width: 259px;
+    margin: 0 2rem;
     .text {
       letter-spacing: 2.362px;
     }
@@ -80,13 +105,17 @@
     .image-container {
       margin: 3rem 0;
       img {
-        width: 457px;
+        width: clamp(259px, 100%, 457px);
       }
     }
 
     ul {
       margin: 2rem auto;
       gap: 2rem;
+    }
+
+    h3 {
+      margin: 0;
     }
 
     .context {
