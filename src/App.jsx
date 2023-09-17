@@ -16,7 +16,10 @@ function App() {
           <Route index element={<Home />} />
           <Route path="destination" element={<Destination />} />
           <Route path="crew" element={<Crew data={data.crew} />} />
-          <Route path="technology" element={<Technology />} />
+          <Route
+            path="technology"
+            element={<Technology data={data.technology} />}
+          />
         </Route>
       </Routes>
     </BrowserRouter>
