@@ -1,5 +1,5 @@
 .crew {
-  background-image: url("../../../public/assets/crew/background-crew-mobile.jpg");
+  background-image: url("/assets/crew/background-crew-mobile.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   padding-top: 5rem;
@@ -69,7 +69,7 @@
     width: clamp(259px, 60%, 100%);
   }
   @media (min-width: 375px) {
-    background-image: url("../../../public/assets/crew/background-crew-tablet.jpg");
+    background-image: url("/assets/crew/background-crew-tablet.jpg");
     height: auto;
 
     .pick {
@@ -113,7 +113,7 @@
     }
   }
   @media (min-width: 768px) {
-    background-image: url("../../../public/assets/crew/background-crew-desktop.jpg");
+    background-image: url("/assets/crew/background-crew-desktop.jpg");
     height: 100vh;
     display: flex;
     align-items: end;

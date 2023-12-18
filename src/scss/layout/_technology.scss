@@ -1,6 +1,6 @@
 @use "../global/fonts" as f;
 .technology {
-  background-image: url("../../../public/assets/technology/background-technology-mobile.jpg");
+  background-image: url("/assets/technology/background-technology-mobile.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   padding: 5rem 0;
@@ -78,7 +78,7 @@
   }
 
   @media (min-width: 375px) {
-    background-image: url("../../../public/assets/technology/background-technology-tablet.jpg");
+    background-image: url("/assets/technology/background-technology-tablet.jpg");
     padding-bottom: 5rem;
 
     .launch {
@@ -107,7 +107,7 @@
     }
   }
   @media (min-width: 768px) {
-    background-image: url("../../../public/assets/technology/background-technology-desktop.jpg");
+    background-image: url("/assets/technology/background-technology-desktop.jpg");
     height: 100vh;
 
     .launch {

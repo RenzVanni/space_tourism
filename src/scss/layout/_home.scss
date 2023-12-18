@@ -1,6 +1,6 @@
 @use "../global/fonts" as font;
 .home {
-  background-image: url("../../../public/assets/home/background-home-mobile.jpg");
+  background-image: url("/assets/home/background-home-mobile.jpg");
   background-size: cover;
   height: 100vh;
   padding-top: 5rem;
@@ -43,7 +43,7 @@
     }
   }
   @media (min-width: 375px) {
-    background-image: url("../../../public/assets/home/background-home-tablet.jpg");
+    background-image: url("/assets/home/background-home-tablet.jpg");
     height: auto;
 
     .text-container {
@@ -69,7 +69,7 @@
     }
   }
   @media (min-width: 768px) {
-    background-image: url("../../../public/assets/home/background-home-desktop.jpg");
+    background-image: url("/assets/home/background-home-desktop.jpg");
     height: 100vh;
     display: flex;
     align-items: flex-end;
