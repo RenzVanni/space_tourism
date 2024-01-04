@@ -17,6 +17,7 @@ body {
   padding: 0;
   height: -moz-fit-content;
   height: fit-content;
+  overflow-x: hidden;
 }
 
 :root {
@@ -199,21 +200,28 @@ li {
   padding-top: 5rem;
   text-align: center;
   min-width: 327px;
+  overflow: hidden;
 }
 .home .text-container {
   padding: 0 1.5rem;
   margin-top: 3rem;
 }
+.home .text-container h5 {
+  transition: all 0.5s ease-in-out;
+}
 .home .text-container h1 {
   margin-top: 1rem;
+  transition: all 0.5s ease-in-out;
 }
 .home .text-container p {
   margin-top: 1rem;
+  transition: all 0.5s ease-in-out;
 }
 .home .explore-button {
   margin-top: 5rem;
   display: flex;
   justify-content: center;
+  transition: all 0.5s ease-in-out;
 }
 .home .explore-button .btn-circle {
   padding: 1rem;
@@ -229,6 +237,7 @@ li {
   font-size: 1.25rem;
   font-weight: 400;
   letter-spacing: 1.25px;
+  transition: all 1s ease-in-out;
 }
 .home .explore-button .btn-circle:hover {
   border-radius: 100%;
@@ -628,7 +637,11 @@ li {
   list-style: none;
 }
 .technology ul li div {
-  padding: 1rem 0.9rem 0.9rem 1rem;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 100%;
   transition: 0.2s ease-in-out;
@@ -731,4 +744,51 @@ li {
     margin: 0;
     width: auto;
   }
+}
+
+.activeNavBar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 250px;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.04);
+  -webkit-backdrop-filter: blur(40.7742271423px);
+          backdrop-filter: blur(40.7742271423px);
+  z-index: 2;
+  transition: all 0.5s ease-in-out;
+}
+.activeNavBar .close-icon {
+  text-align: end;
+  padding: 1rem;
+}
+.activeNavBar .options {
+  display: flex;
+  position: relative;
+}
+.activeNavBar .options ul li {
+  list-style: none;
+  margin-bottom: 1rem;
+}
+.activeNavBar .options ul li input[type=radio] {
+  visibility: hidden;
+  height: 25px;
+  height: 25px;
+}
+.activeNavBar .options ul li input[type=radio]:checked ~ hr {
+  top: 100px;
+}
+.activeNavBar .options ul li input[type=radio]:checked + label {
+  font-weight: 600;
+}
+.activeNavBar .options ul li label {
+  text-transform: uppercase;
+}
+.activeNavBar .options hr {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 25px;
+  border: 2px solid #fff;
+  transition: all 0.2s ease-in-out;
 }/*# sourceMappingURL=styles.css.map */

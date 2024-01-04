@@ -1,5 +1,9 @@
 import { NavLink } from "react-router-dom";
+import ActiveNavBar from "./ActiveNavBar";
+import { useState } from "react";
 function Navbar() {
+  const [close, setClose] = useState(true);
+
   return (
     <div className="navbar">
       <div className="logo-container">
@@ -12,8 +16,13 @@ function Navbar() {
         <NavLink to="technology">Technology</NavLink>
       </div>
       <div className="hamburger-container">
-        <img src="/assets/shared/icon-hamburger.svg" alt="hamburger-icon" />
+        <img
+          onClick={() => setClose(false)}
+          src="/assets/shared/icon-hamburger.svg"
+          alt="hamburger-icon"
+        />
       </div>
+      <ActiveNavBar close={close} setClose={setClose} />
     </div>
   );
 }

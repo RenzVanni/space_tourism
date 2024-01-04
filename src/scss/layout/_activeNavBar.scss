@@ -1,0 +1,49 @@
+.activeNavBar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 250px;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(40.774227142333984px);
+  z-index: 2;
+  transition: all 0.5s ease-in-out;
+
+  .close-icon {
+    text-align: end;
+    padding: 1rem;
+  }
+
+  .options {
+    display: flex;
+    position: relative;
+    ul {
+      li {
+        list-style: none;
+        margin-bottom: 1rem;
+        input[type="radio"] {
+          visibility: hidden;
+          height: 25px;
+          height: 25px;
+          &:checked ~ hr {
+            top: 100px;
+          }
+          &:checked + label {
+            font-weight: 600;
+          }
+        }
+        label {
+          text-transform: uppercase;
+        }
+      }
+    }
+    hr {
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 25px;
+      border: 2px solid #fff;
+      transition: all 0.2s ease-in-out;
+    }
+  }
+}
