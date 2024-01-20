@@ -179,6 +179,14 @@ li {
             backdrop-filter: blur(40.7742271423px);
     padding: 2rem;
     gap: 1rem;
+    position: relative;
+  }
+  .navbar .nav hr {
+    position: absolute;
+    bottom: 0;
+    border: 2px solid #ffffff;
+    width: 45px;
+    transition: left 0.3s ease-in-out;
   }
 }
 @media (min-width: 768px) {

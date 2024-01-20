@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import data from "../data.json";
-
+import { motion } from "framer-motion";
 function Destination() {
   const [destination, setDestination] = useState(data.destinations[0]);
   const [dataName, setDataName] = useState(data.destinations);

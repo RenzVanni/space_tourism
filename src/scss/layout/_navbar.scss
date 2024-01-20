@@ -45,6 +45,15 @@
       backdrop-filter: blur(40.774227142333984px);
       padding: 2rem;
       gap: 1rem;
+      position: relative;
+
+      hr {
+        position: absolute;
+        bottom: 0;
+        border: 2px solid #ffffff;
+        width: 45px;
+        transition: left 0.3s ease-in-out;
+      }
     }
     @media (min-width: 768px) {
       padding: 2rem 10rem 2rem 8rem;
