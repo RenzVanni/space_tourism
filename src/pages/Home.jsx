@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 function Home() {
+  const navigate = useNavigate();
   const [opa, setOpa] = useState(true);
 
   return (
@@ -58,22 +60,13 @@ function Home() {
 
       <div className="explore-button">
         <div className="btn-circle">
-          <motion.button
-            initial={{ rotate: "0deg" }}
-            animate={{
-              rotate: "-360deg",
-            }}
-            transition={{
-              duration: 1,
-              ease: "easeInOut",
-              repeat: Infinity,
-            }}
+          <button
             onClick={() => {
-              setOpa((prev) => !prev);
+              setOpa((prev) => !prev), navigate("/destination");
             }}
           >
             EXPLORE
-          </motion.button>
+          </button>
         </div>
       </div>
     </motion.div>
